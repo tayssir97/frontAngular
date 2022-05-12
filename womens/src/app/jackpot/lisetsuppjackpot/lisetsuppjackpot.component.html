@@ -1,0 +1,33 @@
+<body>
+<div class="container">
+    <div class="content">
+        <form action="#">
+            <h2>charity list</h2>
+
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th scope="col">name</th>
+                    <th scope="col">amount</th>
+                    <th scope="col"> mail</th>
+                    <th scope="col">number_phone</th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+
+
+                <tr *ngFor="let jackpot of jackpots">
+                    <td>{{jackpot.name}}</td>
+                    <td>{{jackpot.amount}}</td>
+                    <td>{{jackpot.mail}}</td>
+                    <td>{{jackpot.number_phone}}</td>
+                    <button class="btn btn-primary" type="button" (click)="remove(jackpot.idJ)"> Delete</button></tr>
+
+                </tbody>
+            </table>
+        </form>
+    </div>
+</div>
+</body>
+

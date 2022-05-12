@@ -1,0 +1,24 @@
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: linear-gradient(135deg, #97a0af, #7ea6f6);
+}
+.container{
+    margin-top: 150px;
+    max-width: 900px;
+    background-color: #fff;
+    padding: 25px 30px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+}
+
+
+
+
+
+
+

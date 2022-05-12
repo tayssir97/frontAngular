@@ -1,0 +1,144 @@
+<body>
+<div class="card-body p-lg-5">
+    <h2 style="color: #2d4474 ;text-align: center;font-weight: bold;">Add event : </h2>
+    <div class="input-group mb-4">
+        <input class="form-control" [(ngModel)]="even.nom" placeholder="Name" type="text">
+        <div class="input-group-append">
+            <span class="input-group-text"><i class="ni ni-tv-2"></i></span>
+        </div>
+    </div>
+
+
+    <div class="input-group mb-4">
+        <input class="form-control" [(ngModel)]="even.nbreDePlaces"placeholder="nbr" type="number">
+        <div class="input-group-append">
+            <span class="input-group-text"><i class="ni ni-money-coins"></i></span>
+        </div>
+    </div>
+    <div class="row d-flex justify-content-lg-center">
+        <div class="input-daterange datepicker row align-items-center">
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>
+                        </div>
+                        <input class="form-control datepicker" placeholder="Select date start" name="dp1" [(ngModel)]="model1" ngbDatepicker #d1="ngbDatepicker" (click)="d1.toggle()" (select)="mama($event)" type="text" [dayTemplate]="t" (dateSelect)="startDateChanged($event)" autocomplete="off"/>
+                        <ng-template #t let-date let-focused="focused" >
+           <span class="custom-day"
+                 [class.text-white]="isActive(date)"
+                 [class.range-end]="isRangeEnd(date)"
+                 [class.range-start]="isRangeStart(date)"
+                 [class.btn-light]="isActive(date)"
+                 [class.bg-primary]="isActive(date)"
+                 [class.range]="isInRange(date)"
+                 [class.faded]="isInRange(date)"
+           >
+             {{ date.day }}
+           </span>
+                        </ng-template>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>
+                    </div>
+                    <input class="form-control datepicker" placeholder="Select date End" name="dp2" [(ngModel)]="model2" ngbDatepicker #d2="ngbDatepicker" (click)="d2.toggle()" type="text" [dayTemplate]="t1" (dateSelect)="endDateChanged($event)" autocomplete="off"/>
+                    <ng-template #t1 let-date let-focused="focused" >
+           <span class="custom-day"
+                 [class.text-white]="isActive(date)"
+                 [class.range-end]="isRangeEnd(date)"
+                 [class.range-start]="isRangeStart(date)"
+                 [class.btn-light]="isActive(date)"
+                 [class.bg-primary]="isActive(date)"
+                 [class.range]="isInRange(date)"
+                 [class.faded]="isInRange(date)"
+           >
+             {{ date.day }}
+           </span>
+                    </ng-template>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row d-flex justify-content-lg-center">
+        <div class="input-group mb-4">
+            <input class="form-control" accept="image/png, image/gif, image/jpeg" placeholder="File"  (change)="onFileChange($event) " type="file">
+            <div class="input-group-append">
+                <span class="input-group-text"><i class="ni ni-cloud-upload-96"></i></span>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="form-group">
+                <div class="input-group">
+                    <input class="form-control" [(ngModel)]="even.tarif"placeholder="tarif:" type="number">
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="form-group">
+                <div class="input-group">
+                    <input class="form-control" [(ngModel)]="even.localisation"placeholder="localisation" type="text">
+                    <div class="input-group-append">
+                        <span class="input-group-text"><i class="ni ni-fat-add"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="form-group">
+                <div class="input-group">
+                    <input class="form-control" [(ngModel)]="even.description"placeholder="description  " type="text">
+                    <div class="input-group-append">
+                        <span class="input-group-text"><i class="ni ni-fat-add"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <button type="button" (click)="add()" class="btn btn-default btn-round btn-block btn-lg">Save </button>
+
+    </div>
+</div>
+
+
+</body>
+
+<h2>Events list</h2>
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th scope="col">nom</th>
+        <th scope="col">description</th>
+        <th scope="col">image</th>
+        <th scope="col">dateD</th>
+        <th scope="col">dateF</th>
+        <th scope="col">localisation</th>
+        <th scope="col">tarif</th>
+        <th scope="col">nbreDePlaces</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+
+
+    <tr *ngFor="let event of envents">
+        <td>{{event.nom}}</td>
+        <td>{{event.description}}</td>
+        <td>{{event.image}}</td>
+        <td>{{event.dateD}}</td>
+        <td>{{event.dateF}}</td>
+        <td>{{event.localisation}}</td>
+        <td>{{event.tarif}}
+        <td>{{event.nbreDePlaces}}</td>
+        <td><button class="btn btn-primary" type="button" (click)="remove(event.idE)"> Delete</button></td>
+    </tr>
+
+    </tbody>
+</table>

@@ -1,0 +1,36 @@
+
+<body>
+<div style="display: inline-grid;width:100%;margin-left:-150px" class="container" >
+    <div *ngFor="let don of donation">
+    <div class="card" style="margin:10px">
+        <div class="face face1" >
+            <div class="content" >
+                <img src="https://github.com/Jhonierpc/WebDevelopment/blob/master/CSS%20Card%20Hover%20Effects/img/launch_128.png?raw=true">
+                <h3>Launch</h3>
+            </div>
+        </div>
+        <div class="face face2" >
+            <div class="content"  >
+                <table>
+                <tr>
+
+                    <td>FIRST NAME:{{don.firstName}}</td>
+                    <td>LAST NAME:{{don.lastName}}</td>
+                    </tr>
+                <tr>
+                    <td>MEDICAL NEED:{{don.medicalNeed}}</td>
+                    <td>SOCIAL NEED:{{don.socialNeed}}</td>
+                </tr>
+
+                <tr>
+                   <td>UNEMPLOYED:{{don.unemployed}}</td>
+                    <td>NEEDY:{{don.needy}}</td>
+                </tr>
+                </table>
+                <button type="button" class="btn btn-outline-danger" [routerLink]="['../jackpot']" >Donate Now</button>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</body>

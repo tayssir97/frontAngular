@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <!---<title> Responsive Registration Form | CodingLab </title>--->
+    <link rel="stylesheet" href="jackpot.component.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="title">let's help women's</div>
+    <div class="content">
+        <form action="#" (ngSubmit)="onSubmit()">
+            <div class="user-details">
+                <div class="input-box">
+                    <span class="details">Username</span>
+                    <input type="text" placeholder="Enter your username"
+                           [(ngModel)]="Jack.name" name="firstName" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Amount</span>
+                    <input type="number" placeholder="$$$$$"
+                           [(ngModel)]="Jack.amount"  name="amount"required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Email</span>
+                    <input type="mail" placeholder="Enter your email"
+                           [(ngModel)]="Jack.mail" name="email"required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Phone Number</span>
+                    <input type="number" placeholder="Enter your number"
+                           [(ngModel)]="Jack.number_phone" name="numberphone"required>
+                </div>
+
+            </div>
+            <div class="button">
+                <input type="submit" value="DONATE">
+            </div>
+
+        </form>
+
+    </div>
+
+    </div>
+
+</body>
+
+</html>

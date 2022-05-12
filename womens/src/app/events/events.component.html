@@ -1,0 +1,125 @@
+<main xmlns="http://www.w3.org/1999/html">
+
+    <div class="position-relative">
+        <!-- shape Hero -->
+        <section class="section section-lg section-shaped pb-250">
+            <div class="shape shape-style-1 shape-default">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="container py-lg-md d-flex">
+                <div class="col px-0">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <h1 class="display-3  text-white">One stop
+                                <span>REGISTRATION IS NOW OPEN !</span>
+                            </h1>
+                            <br/>
+                            <p class="lead  text-white">do not wait to become rich to help the poor: there are those who have always been rich but they have never thought of themselves</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+          <!-- 1st Hero Variation -->
+        <section class="section section-lg pt-lg-0 mt--200">
+            <div class="container" style="margin-left: 90px">
+            <ul>
+            <li  class="booking-card" style="background-image: url(assets/img/theme/El_Hadhra-724x1024.jpg)"  *ngFor="let event of envents">
+                <div class="book-container">
+                    <div class="content">
+                        <button type="button" class="btn btn-outline-danger" [routerLink]="['../reservation']" >Reserver</button>
+
+                    </div>
+                </div>
+                <div class="informations-container">
+                    <h2 class="title">{{event.nom}}</h2>
+                    <p class="sub-title">{{event.description}}</p>
+                    <p class="price"><svg class="icon" style="width:24px;height:24px" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M3,6H21V18H3V6M12,9A3,3 0 0,1 15,12A3,3 0 0,1 12,15A3,3 0 0,1 9,12A3,3 0 0,1 12,9M7,8A2,2 0 0,1 5,10V14A2,2 0 0,1 7,16H17A2,2 0 0,1 19,14V10A2,2 0 0,1 17,8H7Z" />
+                    </svg>{{event.tarif}}.00 DT</p>
+                    <div class="more-information">
+                        <div class="info-and-date-container">
+                            <div class="box info">
+                                <svg class="icon" style="width:24px;height:24px" viewBox="0 0 24 24">
+                                    <path fill="currentColor" d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,17H13V11H11V17Z" />
+                                </svg>
+                                <p>{{event.localisation}}</p>
+                            </div>
+                            <div class="box date">
+                                <svg class="icon" style="width:24px;height:24px" viewBox="0 0 24 24">
+                                    <path fill="currentColor" d="M19,19H5V8H19M16,1V3H8V1H6V3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3H18V1M17,12H12V17H17V12Z" />
+                                </svg>
+                                <p>{{event.dateD}}</p>
+                            </div>
+                        </div>
+                        <p class="disclaimer">Charity events don’t just raise money for project , they also help to and support women's. Plus, speaking as a fundraising professional, I know how nice it is to do something new and different for help women's</p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+            </section>
+    </div>
+
+
+
+    <section style="background-color:transparent"  class="section ">
+                     <div class="container">
+                         <div class="row row-grid align-items-center">
+                             <div class="col-lg-6 order-lg-1">
+                                 <div class="d-flex px-3">
+                                     <div>
+                                         <div class="icon icon-lg icon-shape bg-gradient-white shadow rounded-circle text-primary">
+                                             <i class="ni ni-building text-primary"></i>
+                                         </div>
+                                     </div>
+                                     <div class="pl-4" id="plan">
+                                         <h4 class="display-3 text-black-50" style="align-items: center">BEST EVENTS </h4>
+                                         <p style="align-items: center">Charity events don’t just raise money for project , they also help to and support women's. Plus, speaking as a fundraising professional,
+                                             I know how nice it is to do something new and different for help women's</p>
+
+                                         <br/>
+                                         <br/>
+                                     </div>
+
+
+                                 </div>
+                                             <ngb-carousel style="width: 150%; height: 150%">
+
+                                                 <ng-template ngbSlide>
+                                                     <img  class="img-fluid" src="assets/img/theme/just_abdelli.png" alt="Second slide">
+                                                 </ng-template>
+                                                 <ng-template ngbSlide>
+                                                     <img class="img-fluid" src="assets/img/theme/lnek582n.jpg" alt="Third slide">
+                                                 </ng-template>
+                                                 <ng-template ngbSlide>
+                                                     <img class="img-fluid" src="assets/img/theme/El_Hadhra-724x1024.jpg" alt="First slide">
+                                                 </ng-template>
+                                             </ngb-carousel>
+                                         </div>
+                                     </div>
+                                 </div>
+                     <div>
+                         <br/>
+                         <br/>
+                         <br/>
+                     </div>
+
+                     <!-- SVG separator -->
+                    <div class="separator separator-bottom separator-skew zindex-100">
+                        <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                            <polygon class="fill-white" points="2560 0 2560 100 0 100"></polygon>
+                        </svg>
+                    </div>
+                </section>
+
+            </main>
